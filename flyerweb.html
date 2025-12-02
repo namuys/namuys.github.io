@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="flyer.css">
+    </head>
+
+    <body>
+
+        <div class="heading"> 
+            <h1>Selbstständigkeit in der Informatik</h1> 
+        </div>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openInfo(event, 'Generelles')" >Generelles</button>
+            <button class="tablinks" onclick="openInfo(event, 'Voraussetzungen')" >Voraussetzungen</button>
+            <button class="tablinks" onclick="openInfo(event, 'Ausbildung')" >Ausbildung</button>
+
+            <div class="searchbar"> 
+                <p>Suche..</p>
+            </div>
+        </div>
+
+        <div id="Generelles" class="tabcontent">
+            <h3>Generelle Informationen</h3>
+            <p>Platzhalter</p>
+        </div>
+
+        <div id="Voraussetzungen" class="tabcontent">
+            <h3>Voraussetzungen</h3>
+            <p>Platzhalter</p>
+        </div>
+
+        <div id="Ausbildung" class="tabcontent">
+            <h3>Ausbildung</h3>
+            <p>Platzhalter</p>
+        </div>
+
+        <script>
+            function openInfo(evt, information) {
+                var i, tabcontent, tablinks;
+                // Hiding all tabcontents
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace("active", "");
+                }
+                document.getElementById(information).style.display = "block";
+                evt.currentTarget.className += "active";
+            }
+        </script>
+    </body>
+</html>
