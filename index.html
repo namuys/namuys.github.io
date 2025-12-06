@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="flyer.css">
     </head>
 
     <body>
@@ -16,26 +16,49 @@
             <button class="tablinks" onclick="openInfo(event, 'Ausbildung')" >Ausbildung</button>
 
             <div class="searchbar"> 
-                <p class="searchbartext">Suche..</p>
+                <p class="searchbartext" style="line-height: normal;">Suche..</p>
+            </div>
         </div>
 
         <div id="Generelles" class="tabcontent">
-            <h3>Generelle Informationen</h3>
-            <p>Platzhalter</p>
+            <div class="genInfo">
+                <h4>Warum Informatik?</h4>
+                <p>· Wenn du Zahlen, logisches Rechnen und die Arbeit am Computer liebst... <br>· Wenn du gerne Dinge designst und siehst, wie sie auf dem Bildschirm realisiert werden... <br> dann ist dies der richtige Bereich für dich. </p>
+            </div>
+
+            <div class="genInfo">
+                <h4>Was erwartet dich?</h4>
+                <p>· Erstellung eines eigenen Portfolio als selbständige Person <br>· das Lernen neuer Computersprachen wie Python, Java, HTML etc. 
+                <br>· eigenständiges Arbeiten mit zahlreichen Programmen am Computer 
+                <br>· Zusammenarbeit mit anderen; Gemeinsames ausprobieren und erarbeiten</p>
+            </div>
         </div>
+
+        <div id="Gehalt" class="buttongeneralcontent">Platzhalter</div>
+        <div id="Arbeitszeiten" class="buttongeneralcontent">Platzhalter</div>
+        <div id="Abschluss" class="buttongeneralcontent">Platzhalter</div>
+        <div id="Tipps" class="buttongeneralcontent">Platzhalter</div>
 
         <div id="Voraussetzungen" class="tabcontent">
             <h3>Voraussetzungen</h3>
-            <p>Platzhalter</p>
+            
+            <button class="buttongeneral" onclick="openGeneral(event, 'Gehalt')">
+            <img src="money.jpg" alt="Geld">
+            <br>Gehalt
+            </button>
+
+            <button class="buttongeneral">Arbeitszeiten</button>
+            <button class="buttongeneral">Abschluss</button>
+            <button class="buttongeneral">Tipps</button>
         </div>
 
         <div id="Ausbildung" class="tabcontent">
             <h3>Ausbildung</h3>
-            <p>Platzhalter</p>
+            <p>Es gibt verschiedene Wege, die man antreten kann, um in der Informatik Branche zu arbeiten. Ob Ausbildung oder Studium: mit genug Engagement und Begeisterung kommt man am Ende ans Ziel. Hilfreich können ein Informatik-Studium sein oder sogar die Arbeit als Programmierer im Militär.</p>
         </div>
 
         <script>
-            function openInfo(evt, information) {
+            function openInfo(evt, tabname) {
                 var i, tabcontent, tablinks;
                 // Hiding all tabcontents
                 tabcontent = document.getElementsByClassName("tabcontent");
@@ -47,9 +70,19 @@
                 for (i = 0; i < tablinks.length; i++) {
                     tablinks[i].className = tablinks[i].className.replace("active", "");
                 }
-                document.getElementById(information).style.display = "block";
+                document.getElementById(tabname).style.display = "block";
                 evt.currentTarget.className += "active";
             }
         </script>
+
+        <script>
+            function openGeneral(evt, buttonname) {
+                /*Check which img was pressed*/
+                document.getElementById(buttonname).style.display = "block";
+                evt.currentTarget.className += "active";
+                /*Open content popup of img*/
+            }
+        </script>
+
     </body>
 </html>
