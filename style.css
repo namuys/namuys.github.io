@@ -7,6 +7,10 @@ body {
        text-align: center;
     }
 
+    p {
+        line-height: 25px;
+    }
+
     .tab {
         overflow: hidden;
         background-color: rgb(60, 124, 55);
@@ -35,6 +39,8 @@ body {
     .tabcontent {
         /*Hides content upon launch*/ 
         display: none;
+        padding: 16px 12px;
+        border: 1px solid #686868;
     }
     .searchbar {
         display: inline-block;
@@ -53,5 +59,28 @@ body {
         background-color: rgb(255, 255, 255);
         padding: 5px;
         border: 2px solid #686868;
+    }
+
+    .genInfo {
+        width: 30%;
+        display: inline-block;
+        background-color: rgb(85, 130, 95);
+        vertical-align: top;
+        padding: 16px 16px 16px 16px;
+        margin: 20px 80px 100px 80px;
+    }
+
+    .buttongeneral {
+        padding: 10px 100px 10px 10px;
+    }
+
+    .buttongeneralcontent {
+        display: none;
+        background-color: aqua;
+        text-align: center;
+        margin: auto;
+
+        
+
     }
 }
