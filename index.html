@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Refers to CSS stylesheet -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="heading"> 
+            <h1>Selbstständigkeit in der Informatik</h1> 
+        </div>
+        
+        <!-- Content of the modal displayed on top of everything when pressing buttons in "Voraussetzungen" -->
+        <div id="Gehalt" class="modalcontent"> 
+            <span class="close">&times;</span>
+            <p>· Als selbständige Person: flexibles Gehalt. 
+            <br>Je nach Auftrag kann ein eigener Preis gesetzt werden oder Gehaltsvorschläge von Kunden angenommen werden. 
+            <br><b>Achtung:</b> Das bedeutet auch, dass man kein festes monatliches Gehalt hat; Man muss sich selbst um das 
+            Einkommen, sowie Rente kümmern. 
+            <br><br>· Als angestellte Person: festes Gehalt und Versicherung für Rente u.ä. 
+            Möglicherweise kein so hohes Gehalt wie als selbstständige Person.</p>
+        </div>
+        
+        <div id="Arbeitszeiten" class="modalcontent">
+            <span class="close">&times;</span>
+            <p>· flexible Arbeitszeiten im Homeoffice. 
+            <br><b>Achtung:</b> Das bedeutet auch, dass man Disziplin mit sich bringen muss, 
+            um konzentriert und produktiv arbeiten zu können.</p>
+        </div>
+        
+        <div id="Abschluss" class="modalcontent">
+            <span class="close">&times;</span>
+            <p>· Je nachdem, ob man ein Studium oder eine Ausbildung 
+            anfangen möchte, sind verschiedene Schulabschlüsse vonnöten. In der Regel reichen ein Real- 
+            oder weiterführender Abschluss aus.
+            <br>· Es gibt keine Schulfächer, die eine Voraussetzung für Infomratik sind. Fächer wie Mathe oder Informatik bieten aber eine gute Grundlage für erstes Fachwissen, das einem auf dem Weg gut weiterhelfen kann.</p>
+        </div>
+        
+        <div id="Tipps" class="modalcontent">
+            <span class="close">&times;</span>
+            <p>· Eigenes Können: Als selbständige Person ist es wichtig zu 
+            akzeptieren, wenn ein Auftrag zu schwierig für einen ist, und ihn dann auch abzulehnen - dies 
+            vermeidet Stress und Probleme. 
+            <br> · Hohe Erwartungen: Wenn man gerade am Anfang seiner Karriere steht, sollte man nicht direkt 
+            mit unzähligen Aufträgen für viel Geld rechnen, da dies erst mit Zeit und Erfahrung kommt.</p>
+        </div>
+
+        <!-- The tab in which everything is opened and displayed via script-->
+        <div class="tab">
+            <button class="tablinks" onclick="openInfo(event, 'Generelles')" >Generelles</button>
+            <button class="tablinks" onclick="openInfo(event, 'Voraussetzungen')" >Voraussetzungen</button>
+            <button class="tablinks" onclick="openInfo(event, 'Ausbildung')" >Ausbildung</button>
+
+            <!-- The (unusuable) search bar in the tab div-->
+            <div class="searchbar"> 
+                <p class="searchbartext" style="line-height: normal; color: rgb(37, 37, 37);">Suche..</p>
+            </div>
+        </div>
+
+        <!-- All of the text content of "Generelles" -->
+        <div id="Generelles" class="tabcontent">
+            <div class="genInfo">
+                <h4><b>Warum Informatik?</b></h4>
+                <p>· Wenn du Zahlen, logisches Rechnen und die Arbeit am Computer liebst... <br>· Wenn du gerne Dinge designst und siehst, wie sie auf dem Bildschirm realisiert werden... <br><br><br><br> dann ist dies der richtige Bereich für dich. </p>
+            </div>
+
+            <div class="genInfo">
+                <h4><b>Was erwartet dich?</b></h4>
+                <p>· Erstellung eines eigenen Portfolio als selbständige Person 
+                <br>· das Lernen neuer Computersprachen wie Python, Java, HTML etc. 
+                <br>· eigenständiges Arbeiten mit zahlreichen Programmen am Computer 
+                <br>· Zusammenarbeit mit anderen; Gemeinsames ausprobieren und erarbeiten
+                <br><br><b>Typische Aufgaben:</b>
+                <br>· Codieren bzw. Programmieren von Websites
+                <br>· Entwicklung neuer KI-Systeme 
+                <br>· Entwicklung von Marketing-Systemen für Websites</p>
+            </div>
+
+            <!-- Code snippet of website -->
+            <img src="code.png" alt="Code Screenshot" style="width: 70%; display: block; margin: auto;">
+
+        </div>
+
+        <!-- Creating the modal bg to stylize in CSS stylesheet -->
+        <div id="modal" class="modal"></div>
+
+        <!-- Content of "Voraussetzungen" -->
+        <div id="Voraussetzungen" class="tabcontent">
+            <h3>Voraussetzungen</h3>
+            <p>· Ein Interesse an Informatik, sowie der Arbeit mit Computern und Zahlen sind wichtig. 
+            <br>· Geduld und Stressmanagement - Programmieren ist kein Job, der stets problemlos ist. Auch kleine Fehler können können Gröẞe Auswirkungen haben. In diesen Situationen ist es wichtig, Ruhe zu bewahren.</p>
+            
+            <!-- Buttons with images which opens modal and modalcontent via script -->
+            <button class="btngen" onclick="openGen(modal, 'Gehalt')">
+                <img src="money.png" alt=" gezeichneter abstrahierter Euroschein">
+                <br>Gehalt
+            </button>
+
+            <button class="btngen" onclick="openGen(modal,'Arbeitszeiten')">
+                <img src="clock.png" alt="gezeichnete Uhr">
+                <br>Arbeitszeiten
+            </button>
+
+            <button class="btngen" onclick="openGen(modal, 'Abschluss')">
+                <img src="books.png" alt="gezeichneter Stapel Bücher">
+                <br>Abschluss
+            </button>
+
+            <button class="btngen" onclick="openGen(modal,'Tipps')">
+                <img src="tips.png" alt="gezeichneter Laptop mit Glühbirne aufm Display">
+                <br>Tipps
+            </button>
+
+        </div>        
+
+        <!-- Content of "Ausbildung" -->
+        <div id="Ausbildung" class="tabcontent">
+            <h3>Ausbildung</h3>
+            <p>Es gibt verschiedene Wege, die man antreten kann, um in der Informatik Branche zu arbeiten. Ob Ausbildung oder Studium: mit genug Engagement und Begeisterung kommt man am Ende ans Ziel. Hilfreich können ein Informatik-Studium sein oder sogar die Arbeit als Programmierer im Militär.</p>
+        </div>
+
+        <script>
+            function openInfo(evt, tabname) {
+                var i, tabcontent, tablinks;
+                // Hiding all tabcontents
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Changes button to active status to change style
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                // Displaying the tabcontent the user pressed on
+                document.getElementById(tabname).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+
+        <script>
+            function openGen(modal, generalInfo) {
+            var i, modalcontent;
+            modalcontent = document.getElementById(generalInfo)
+            var span = modalcontent.querySelector(".close");
+            
+            // Open modal bg
+            modal.style.display = "block";
+
+            // Open specific content
+            modalcontent.style.display = "block";
+
+            // Close modal by pressing X
+            span.onclick = function(event) {
+                if (event.target == span) {
+                    modal.style.display = "none";
+                    modalcontent.style.display = "none";
+                }
+            } 
+
+            //Closes modal content if pressing outside of modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    modalcontent.style.display = "none";
+                }
+            }
+            }
+        </script>
+
+    </body>
+
+</html>
