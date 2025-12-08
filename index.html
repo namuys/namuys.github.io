@@ -118,6 +118,7 @@
             function openGen(modal, generalInfo) {
             var i, modalcontent;
             modalcontent = document.getElementById(generalInfo)
+            var span = document.getElementsByClassName("close")[0];
             
             //Open modal bg
             modal.style.display = "block";
@@ -125,10 +126,10 @@
             //Open specific content
             modalcontent.style.display = "block";
 
-            var span = document.getElementsByClassName("close")[0];
-                span.onclick = function() {
-                    modal.style.display = "none";
-                } 
+            // Close modal by pressing X
+            span.onclick = function() {
+                modal.style.display = "none";
+            } 
 
             window.onclick = function(event) {
                 if (event.target == modal) {
@@ -142,6 +143,7 @@
     </body>
 
 </html>
+
 
 
 
