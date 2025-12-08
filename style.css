@@ -58,7 +58,7 @@ body {
     .searchbar {
         display: inline-block;
         position: relative;
-        left: 650px;
+        left: 600px;
         width: 30%;
         margin-top: 5px;
         margin-bottom: 5px;
@@ -131,4 +131,5 @@ body {
  
     }
 }
+
 
