@@ -68,6 +68,20 @@ body {
         border: 2px solid #686868;
     }
 
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
     .genInfo {
         width: 30%;
         display: inline-block;
@@ -110,4 +124,5 @@ body {
  
     }
 }
+
 
