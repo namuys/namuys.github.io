@@ -10,12 +10,30 @@
             <h1>Selbstständigkeit in der Informatik</h1> 
         </div>
         
-        <div id="Gehalt" class="modalcontent">· Als selbständige Person: flexibles Gehalt. <br>Je nach Auftrag kann ein eigener Preis gesetzt werden oder Gehaltsvorschläge von Kunden angenommen werden. <br><b>Achtung:</b> Das bedeutet auch, dass man kein festes monatliches Gehalt hat; Man muss sich selbst um das Einkommen, sowie Rente kümmern. 
-        <br><br>· Als angestellte Person: festes Gehalt und Versicherung für Rente u.ä. Möglicherweise kein so hohes Gehalt wie als selbstständige Person.</div>
-        <div id="Arbeitszeiten" class="modalcontent">· flexible Arbeitszeiten im Homeoffice. <br><b>Achtung:</b> Das bedeutet auch, dass man Disziplin mit sich bringen muss, um konzentriert und produktiv arbeiten zu können.</div>
-        <div id="Abschluss" class="modalcontent">· Je nachdem, ob man ein Studium oder eine Ausbildung anfangen möchte, sind verschiedene Schulabschlüsse vonnöten. In der Regel reichen ein Real- oder weiterführender Abschluss aus.</div>
-        <div id="Tipps" class="modalcontent">· Eigenes Können: Als selbständige Person ist es wichtig zu akzeptieren, wenn ein Auftrag zu schwierig für einen ist, und ihn dann auch abzulehnen - dies vermeidet Stress und Probleme. 
-        <br> · Hohe Erwartungen: Wenn man gerade am Anfang seiner Karriere steht, sollte man nicht direkt mit unzähligen Aufträgen für viel Geld rechnen, da dies erst mit Zeit und Erfahrung kommt.</div>
+        <div id="Gehalt" class="modalcontent"> <p>· Als selbständige Person: flexibles Gehalt. 
+            <br>Je nach Auftrag kann ein eigener Preis gesetzt werden oder Gehaltsvorschläge von Kunden angenommen werden. 
+            <br><b>Achtung:</b> Das bedeutet auch, dass man kein festes monatliches Gehalt hat; Man muss sich selbst um das 
+            Einkommen, sowie Rente kümmern. 
+            <br><br>· Als angestellte Person: festes Gehalt und Versicherung für Rente u.ä. 
+            Möglicherweise kein so hohes Gehalt wie als selbstständige Person.</p>
+            
+            <span class="close">&times;</span>
+            
+        </div>
+        
+        <div id="Arbeitszeiten" class="modalcontent">· flexible Arbeitszeiten im Homeoffice. 
+            <br><b>Achtung:</b> Das bedeutet auch, dass man Disziplin mit sich bringen muss, 
+            um konzentriert und produktiv arbeiten zu können.</div>
+        
+        <div id="Abschluss" class="modalcontent">· Je nachdem, ob man ein Studium oder eine Ausbildung 
+            anfangen möchte, sind verschiedene Schulabschlüsse vonnöten. In der Regel reichen ein Real- 
+            oder weiterführender Abschluss aus.</div>
+        
+        <div id="Tipps" class="modalcontent">· Eigenes Können: Als selbständige Person ist es wichtig zu 
+            akzeptieren, wenn ein Auftrag zu schwierig für einen ist, und ihn dann auch abzulehnen - dies 
+            vermeidet Stress und Probleme. 
+        <br> · Hohe Erwartungen: Wenn man gerade am Anfang seiner Karriere steht, sollte man nicht direkt 
+            mit unzähligen Aufträgen für viel Geld rechnen, da dies erst mit Zeit und Erfahrung kommt.</div>
 
         <div class="tab">
             <button class="tablinks" onclick="openInfo(event, 'Generelles')" >Generelles</button>
@@ -107,6 +125,8 @@
             //Open specific content
             modalcontent.style.display = "block";
 
+            var span = document.getElementsByClassName("close")[0];
+
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
@@ -119,4 +139,5 @@
     </body>
 
 </html>
+
 
