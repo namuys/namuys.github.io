@@ -44,6 +44,11 @@ body {
         border: 1px solid #686868;
         background-color: #a2a2a2;
     }
+
+    .tablinks {
+        color: black;
+    }
+    
     .searchbar {
         display: inline-block;
         position: relative;
@@ -105,3 +110,4 @@ body {
  
     }
 }
+
